@@ -41,7 +41,14 @@ impl Component for FutureDemo {
     fn view(&self) -> Html {
         return html! {
             <div>
-                <div>{self.display_string.clone()}</div>
+                <div><b>{self.display_string.clone()}</b></div>
+                <div>
+                    {"Under the hood, a js function is called with a promise:"}<br/><br/>
+                    <code>{"export async function js_later(inp) {"}<br/>
+                    {"\u{00a0}\u{00a0}\u{00a0}await new Promise(cb => setTimeout(cb, 2000));"}<br/>
+                    {"\u{00a0}\u{00a0}\u{00a0}return (await inp) + ' World';"}<br/>
+                    {"}"}</code><br/>
+                </div>
             </div>
         };
     }
