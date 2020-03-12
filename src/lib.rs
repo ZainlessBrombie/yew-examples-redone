@@ -1,17 +1,16 @@
-#![recursion_limit = "256"]
-use yew::{Component, ComponentLink, Html, ShouldRender, html};
+#![recursion_limit = "512"]
+use yew::{html, Component, ComponentLink, Html, ShouldRender};
 extern crate js_sys;
 extern crate wasm_bindgen;
 extern crate web_sys;
 extern crate yew;
-use wasm_bindgen::prelude::*;
+use crate::demos::crm::CrmExample;
 use crate::demos::pub_sub::PubSubExample;
+use wasm_bindgen::prelude::*;
 
 mod demos;
 
-
 struct App {}
-
 
 impl Component for App {
     type Message = ();
@@ -26,10 +25,9 @@ impl Component for App {
     }
 
     fn view(&self) -> Html {
-
         html! {
             <div style="display: flex; height: 100vh; width: 100vw; justify-content: center; align-items: center;">
-                <PubSubExample />
+                <CrmExample />
             </div>
         }
     }

@@ -33,7 +33,7 @@ impl Component for PublisherComponent {
             <div class="card" style="height: 300px; width: 300px;">
                 <div class="card-content" style="display: flex; align-items: center; flex-direction: column;">
                     <h3>{"Publisher"}</h3>
-                    <button class="waves-effect waves-light btn mt-2"
+                    <button class="waves-effect waves-light btn"
                             style="margin-top: 16px; width: 140px;"
                             onclick=self.call_self_1.clone()>{"Click Me (1)"}</button>
                     <button class="waves-effect waves-light btn mt-2"
