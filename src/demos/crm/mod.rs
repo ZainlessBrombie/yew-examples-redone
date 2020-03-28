@@ -129,6 +129,7 @@ impl Component for CrmExample {
         }
 
         return html! {
+            <div style="height: 100%; width: 100%; overflow-y: scroll; justify-content: center; align-items: center; display: flex;">
             <div style="height: 70vh; width: 70vw;">
                 <h3>{"Customer Orders"}</h3>
                 <div class="card">
@@ -163,6 +164,7 @@ impl Component for CrmExample {
                 <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;">
                     {for clients_list}
                 </div>
+            </div>
             </div>
         };
     }
