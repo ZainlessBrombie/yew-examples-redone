@@ -31,6 +31,7 @@ yew = { git = "https://github.com/ZainlessBrombie/yew.git", features = ["web_sys
 js-sys = "0.3.36"
 serde = "1.0.104"
 wasm-bindgen-futures = "0.4.9"
+
 [dependencies.web-sys]
 version = "0.3.36"
 features = [
